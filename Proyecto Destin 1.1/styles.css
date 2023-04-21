@@ -1,0 +1,109 @@
+:root {
+    --color_principal: rgb(207, 45, 45);
+    --color_secundario: rgb(197, 54, 54);
+    --color_header: rgb(255, 255, 255);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(218, 139, 35);
+}
+#navbar {
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    padding: 6px;
+    margin: 0;
+}
+#navbar .contain-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navbar a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+#navbar li{
+    list-style: none;
+}
+#navbar .contain-navbar .logo img {
+    width: 52px;
+    border-radius: 50px;
+}
+#navbar .contain-navbar .logo img:hover {
+    opacity: 0.6;
+    border: transparent;
+}
+#navbar .contain-navbar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+#navbar .contain-navbar .logo strong{
+    font-weight: bold;
+}
+#navbar .contain-navbar .logo strong:hover {
+    opacity: .7;
+}
+#navbar .contain-navbar .list-nav{
+    display: flex;
+    /* margin-right: px; */
+}
+#navbar .contain-navbar .list-nav li{
+    list-style: none;
+    display: inline;
+    margin-left: 10px;
+}
+#navbar .contain-navbar .list-nav li a {
+    padding: 23px 10px;
+}
+#navbar .contain-navbar .list-nav ul a:hover{
+    background-color: black;
+    color: white;
+}
+#navbar #list-nav-open {
+    display: none;
+}
+#navbar .btn {
+    display: none;
+}
+#navbar .contain-navbar .logo a {
+    color: var(--color_principal);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 950px) {
+    #navbar .btn {
+        display: flex;
+    }
+    #navbar .btn #menu-btn {
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: transparent;
+    }
+    #navbar .btn #menu-btn:hover{
+        opacity: .6;
+        cursor: pointer;
+    }
+    #navbar .contain-navbar .list-nav li{
+        display: none;
+    }
+    #navbar #list-nav-open li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 28px;
+    }
+    #navbar #list-nav-open li a:hover {
+        color: rgb(234, 226, 217);
+    }
+}
